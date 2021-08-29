@@ -35,7 +35,23 @@ submit.addEventListener('click', async () => {
         .div(offset)
         .expandDims()
 
-    let predictions = await model.predict(tensor).data()
+    //Predictions
+    let predictions = await model.predict(processed).data()
+    let top5 = Array.from(predictions)
+        .map((p, i) => {
+            return {
+                probability: p,
+                className: IMAGENET_CLASSES[i]
+            }
+        }).sort((a,b) => {
+            return b.probability - a.probability
+        }).slice(0, 5)
+    
+    pred.innerHTML = ''
+    top5.forEach((p) => {
+        li = document.createElement('li')
+        li.innerHTML = `${p.className}: ${p.probability.toFixed(6)}`
 
-    console.log(predictions)
+        pred.appendChild(li)
+    })
 })
