@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <title>Image Recognizer</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Image Recognizer - Client Side</h1>
+
+            <div class="col-12">
+                <div id="progress" class="progress progress-bar progress-bar-stripped progress-bar-animated mb-2">
+                    Loading Model
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <input type="file" class="form-control border-0" id="img-input">
+                </div>
+                <div class="col-6">
+                    <button id="submit" class="btn btn-dark float-right">Predict</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col">
+                    <h2 class="ml-3">Predictions</h2>
+                    <ol id="pred"></ol>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="ml-3">Image</h2>
+                    <img src="" alt="" class="ml-3" id="selected">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.8.0/dist/tf.min.js"></script>
+    <script src="./scripts/predict.js"></script>
+</body>
+</html>
