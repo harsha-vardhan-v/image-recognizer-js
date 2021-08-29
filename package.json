@@ -1,0 +1,22 @@
+{
+  "name": "image-recognizer",
+  "version": "1.0.0",
+  "description": "A web app that uses mobileNet deep learning model to predict images in client side using tensorflowjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harsha-vardhan-v/image-recognizer-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harsha-vardhan-v/image-recognizer-js/issues"
+  },
+  "homepage": "https://github.com/harsha-vardhan-v/image-recognizer-js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
